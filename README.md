@@ -86,3 +86,8 @@ Star the repo if you find it useful!
 **Made for operations leaders, project management offices, and organizations choosing enterprise work management platforms that match their portfolio needs and data-sovereignty requirements.**
 Let's make enterprise work management more open, structured, and self-hostable.
 >>>>>>> 911149a703a2b1594d44106b29bfe8e55b7c072c
+Copy-Item README.md README.md.bak -Force
+# Manual step: replace SaaS and Open-Source sections with content above
+git add README.md
+git commit -m "docs: add enterprise GenAI per-token pricing (OpenAI, Anthropic, Vertex, Bedrock, Cohere, Writer) and open-source serving engines; correct Adobe Sensei status"
+git push
