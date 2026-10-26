@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080b14"/>
+      <stop offset="45%" stop-color="#0e1628"/>
+      <stop offset="80%" stop-color="#14122e"/>
+      <stop offset="100%" stop-color="#090d18"/>
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="35%" stop-color="#c084fc"/>
+      <stop offset="70%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <linearGradient id="pillGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="pillGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="pillGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#be185d" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="pillGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="pillGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#b45309" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- Glowing Radial Lights -->
+    <radialGradient id="glowViolet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3"/>
+      <circle cx="40" cy="40" r="1.2" fill="#64748b" fill-opacity="0.4"/>
+    </pattern>
+
+    <style>
+      @keyframes floatSlow1 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(0.5deg); }
+      }
+      @keyframes floatSlow2 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(8px) rotate(-0.5deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(1.08); }
+      }
+      @keyframes flowDash {
+        0% { stroke-dashoffset: 120; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes particleMove {
+        0% { offset-distance: 0%; opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+      .anim-float1 { animation: floatSlow1 7s ease-in-out infinite; }
+      .anim-float2 { animation: floatSlow2 8s ease-in-out infinite; }
+      .anim-glow { animation: pulseGlow 6s ease-in-out infinite alternate; }
+      .flow-line {
+        stroke-dasharray: 6 10;
+        animation: flowDash 8s linear infinite;
+      }
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .sub-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+      }
+      .badge-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.3px;
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="420" fill="url(#bgGrad)"/>
+  <rect width="1200" height="420" fill="url(#grid)"/>
+
+  <!-- Dynamic Glowing Radial Orbs (Placed Behind Content) -->
+  <circle cx="200" cy="110" r="180" fill="url(#glowCyan)" class="anim-glow"/>
+  <circle cx="1020" cy="130" r="210" fill="url(#glowViolet)" class="anim-glow"/>
+  <circle cx="600" cy="360" r="190" fill="url(#glowPink)" class="anim-glow"/>
+
+  <!-- Animated Circuit & Flow Lines (Background Layers) -->
+  <g opacity="0.45">
+    <path class="flow-line" d="M 80 80 Q 280 40 460 120 T 820 100 T 1120 70" fill="none" stroke="#38bdf8" stroke-width="1.8"/>
+    <path class="flow-line" d="M 100 340 Q 320 380 560 320 T 940 350 T 1140 320" fill="none" stroke="#c084fc" stroke-width="1.8" style="animation-direction: reverse;"/>
+    <path class="flow-line" d="M 120 200 L 280 200 L 360 260 L 520 260" fill="none" stroke="#818cf8" stroke-width="1.2"/>
+    <path class="flow-line" d="M 680 260 L 840 260 L 920 200 L 1080 200" fill="none" stroke="#f472b6" stroke-width="1.2"/>
+  </g>
+
+  <!-- Floating Dynamic Feature Pills (Decorations placed around borders, non-interfering) -->
+  <g class="anim-float1">
+    <!-- Top Left Pill -->
+    <g transform="translate(70, 48)">
+      <rect width="210" height="38" rx="19" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+      <rect width="210" height="38" rx="19" fill="url(#pillGrad1)"/>
+      <circle cx="22" cy="19" r="6" fill="#38bdf8"/>
+      <text x="36" y="24" fill="#e0f2fe" class="badge-text">⚡ Enterprise LLM APIs</text>
+    </g>
+    <!-- Bottom Right Pill -->
+    <g transform="translate(890, 334)">
+      <rect width="230" height="38" rx="19" fill="#0f172a" stroke="#ec4899" stroke-width="1.2" opacity="0.95"/>
+      <rect width="230" height="38" rx="19" fill="url(#pillGrad3)"/>
+      <circle cx="22" cy="19" r="6" fill="#ec4899"/>
+      <text x="36" y="24" fill="#fce7f3" class="badge-text">🛡️ Sovereign Self-Hosted</text>
+    </g>
+  </g>
+
+  <g class="anim-float2">
+    <!-- Top Right Pill -->
+    <g transform="translate(900, 48)">
+      <rect width="220" height="38" rx="19" fill="#0f172a" stroke="#a855f7" stroke-width="1.2" opacity="0.95"/>
+      <rect width="220" height="38" rx="19" fill="url(#pillGrad2)"/>
+      <circle cx="22" cy="19" r="6" fill="#c084fc"/>
+      <text x="36" y="24" fill="#f3e8ff" class="badge-text">🤖 Agentic Orchestration</text>
+    </g>
+    <!-- Bottom Left Pill -->
+    <g transform="translate(80, 334)">
+      <rect width="210" height="38" rx="19" fill="#0f172a" stroke="#10b981" stroke-width="1.2" opacity="0.95"/>
+      <rect width="210" height="38" rx="19" fill="url(#pillGrad4)"/>
+      <circle cx="22" cy="19" r="6" fill="#34d399"/>
+      <text x="36" y="24" fill="#d1fae5" class="badge-text">🔍 Production Vector &amp; RAG</text>
+    </g>
+  </g>
+
+  <!-- Central Bottom Pill -->
+  <g transform="translate(480, 348)">
+    <rect width="240" height="34" rx="17" fill="#0f172a" stroke="#f59e0b" stroke-width="1" opacity="0.9"/>
+    <rect width="240" height="34" rx="17" fill="url(#pillGrad5)"/>
+    <circle cx="20" cy="17" r="5" fill="#fbbf24"/>
+    <text x="33" y="22" fill="#fef3c7" class="badge-text">🚀 High-Throughput Serving</text>
+  </g>
+
+  <!-- Central Foreground Shield / Container (Protects text legibility) -->
+  <g transform="translate(180, 105)">
+    <!-- Backdrop card with rounded corners and subtle glowing border -->
+    <rect width="840" height="205" rx="24" fill="#090d18" fill-opacity="0.88" stroke="#334155" stroke-width="1.2"/>
+    <rect width="840" height="205" rx="24" fill="none" stroke="url(#titleGrad)" stroke-width="1.5" stroke-opacity="0.35"/>
+
+    <!-- Category Pill Label -->
+    <g transform="translate(290, 22)">
+      <rect width="260" height="26" rx="13" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+      <text x="130" y="17" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="1.2" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto">
+        ✨ CURATED ENTERPRISE ECOSYSTEM ✨
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="420" y="98" text-anchor="middle" fill="url(#titleGrad)" font-size="37" class="title-text">
+      Enterprise Generative AI Services
+    </text>
+
+    <!-- Subtitle Line 1 -->
+    <text x="420" y="142" text-anchor="middle" fill="#e2e8f0" font-size="16" class="sub-text">
+      The Ultimate Directory of Frontier Cloud APIs, Managed LLM Platforms,
+    </text>
+
+    <!-- Subtitle Line 2 -->
+    <text x="420" y="170" text-anchor="middle" fill="#94a3b8" font-size="14.5" class="sub-text">
+      High-Throughput Inference Engines, Agent Frameworks &amp; Self-Hosted Stacks
+    </text>
+  </g>
+</svg>
